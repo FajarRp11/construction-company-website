@@ -16,13 +16,22 @@
     <!-- TAILWINDCSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
+    <!-- MY STYLE -->
+    <link rel="stylesheet" href="./css/mystyle.css" />
+
     <!-- ALPINEJS -->
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
-  <body class="bg-slate-700">
-    <nav class="w-full top-0 left-0 right-0 p-4 fixed" x-data="{open: false}">
-      <div class="container mx-auto">
-        <div class="flex justify-between">
+  <body>
+    <nav
+      class="w-full top-0 left-0 right-0 p-4 fixed"
+      x-data="{open: false}"
+      id="nav"
+    >
+      <div
+        class="container mx-auto flex flex-col justify-between md:flex-row md:items-center"
+      >
+        <div class="flex justify-between w-full">
           <a
             href=""
             class="flex justify-center items-center font-bold gap-2 text-white"
@@ -33,13 +42,13 @@
           <img
             src="./assets/img/icons/menu.svg"
             alt=""
-            class="w-4"
+            class="w-4 md:hidden"
             @click="open = !open"
           />
         </div>
 
         <ul
-          class="mt-4 flex flex-col gap-2 text-white text-[12px]"
+          class="mt-4 flex flex-col gap-2 text-white text-[12px] md:hidden"
           x-show="open"
           x-transition:enter="transition ease-out duration-300"
           x-transition:enter-start="opacity-0 scale-90"
@@ -54,7 +63,36 @@
           <li><a href="">PRODUCTS</a></li>
           <li><a href="">RECENT NEWS</a></li>
         </ul>
+        <div class="hidden md:block">
+          <ul class="flex gap-4 text-white text-sm justify-center items-center">
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">SERVICES</a></li>
+            <li><a href="">PRODUCTS</a></li>
+            <li><a href="">CONTACTS</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
+
+    <section id="home">
+      <div
+        class="container mx-auto min-h-screen flex justify-center items-center flex-col"
+      >
+        <h1 class="text-3xl tracking-widest font-bold text-white">
+          CONSTRUCTION
+        </h1>
+        <p class="text-wrap max-w-60 text-center text-white text-[12px] my-6">
+          SEE HOW A 10-STORIES TOWER'S BEING BUILT IN A TIME-LAPSE!
+        </p>
+        <button
+          class="bg-yellow-500 text-white text-[12px] px-6 py-2 rounded-sm"
+        >
+          SEE OUR RECENT PROJECT
+        </button>
+      </div>
+    </section>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
