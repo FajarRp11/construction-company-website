@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +24,7 @@
   </head>
   <body>
     <nav
-      class="w-full top-0 left-0 right-0 p-4 fixed"
+      class="w-full top-0 left-0 right-0 p-4 fixed z-99"
       x-data="{open: false}"
       id="nav"
     >
@@ -36,8 +36,12 @@
             href=""
             class="flex justify-center items-center font-bold gap-2 text-white"
           >
-            <img class="w-4" src="./assets/img/icons/cube-solid.svg" alt="" />
-            <span>CONSTRUCTION</span>
+            <img
+              class="w-4 md:w-6"
+              src="./assets/img/icons/cube-solid.svg"
+              alt=""
+            />
+            <span class="text-base md:text-2xl">CONSTRUCTION</span>
           </a>
           <img
             src="./assets/img/icons/menu.svg"
@@ -57,16 +61,16 @@
           x-transition:leave-start="opacity-100 scale-100"
           x-transition:leave-end="opacity-0 scale-90"
         >
-          <li><a href="">HOME</a></li>
-          <li><a href="">ABOUT</a></li>
-          <li><a href="">SERVICES</a></li>
-          <li><a href="">PRODUCTS</a></li>
-          <li><a href="">RECENT NEWS</a></li>
+          <li><a href="#home" @click="open = !open">HOME</a></li>
+          <li><a href="#our-history" @click="open = !open">ABOUT</a></li>
+          <li><a href="" @click="open = !open">SERVICES</a></li>
+          <li><a href="" @click="open = !open">PRODUCTS</a></li>
+          <li><a href="" @click="open = !open">RECENT NEWS</a></li>
         </ul>
         <div class="hidden md:block">
           <ul class="flex gap-4 text-white text-sm justify-center items-center">
-            <li><a href="">HOME</a></li>
-            <li><a href="">ABOUT</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#our-history">ABOUT</a></li>
             <li><a href="">SERVICES</a></li>
             <li><a href="">PRODUCTS</a></li>
             <li><a href="">CONTACTS</a></li>
@@ -79,10 +83,12 @@
       <div
         class="container mx-auto min-h-screen flex justify-center items-center flex-col"
       >
-        <h1 class="text-3xl tracking-widest font-bold text-white">
+        <h1 class="text-3xl md:text-5xl tracking-widest font-bold text-white">
           CONSTRUCTION
         </h1>
-        <p class="text-wrap max-w-60 text-center text-white text-[12px] my-6">
+        <p
+          class="text-wrap max-w-60 md:max-w-80 text-center text-white text-[12px] my-4"
+        >
           SEE HOW A 10-STORIES TOWER'S BEING BUILT IN A TIME-LAPSE!
         </p>
         <button
@@ -90,6 +96,38 @@
         >
           SEE OUR RECENT PROJECT
         </button>
+      </div>
+    </section>
+
+    <section id="our-history">
+      <div
+        class="container mx-auto min-h-screen flex justify-center items-center"
+      >
+        <div class="grid grid-cols-12 px-4">
+          <div class="col-span-12">
+            <hr class="w-8 mb-3 bg-yellow-500 h-[3px] opacity-75" />
+            <h1 class="font-bold text-xl">OUR HISTORY</h1>
+            <p class="text-sm opacity-75 font-semibold mb-2 mt-4">
+              OUR CONSTRUCTION COMPANY HAS BEEN FOUNDED 10 YEARS AGO, AT THE
+              VERY PEAK OF THE BUILDING FRENZY IN THE US...
+            </p>
+            <p class="text-[12px] opacity-50 mb-4">
+              Since then we've build hundreds of commertial, government, and
+              private buildings and facilities. It may not sound like a lot, but
+              if you estimate the manpower, working hours, planing and
+              correlating that were all involved in completing each separate
+              project, then our productivity is immense!
+            </p>
+            <button
+              class="bg-yellow-500 text-white text-[12px] px-6 py-2 rounded-sm"
+            >
+              READ MORE
+            </button>
+          </div>
+          <div class="col-span-12 mt-4">
+            <img src="./assets/img/worker.jpg" alt="" />
+          </div>
+        </div>
       </div>
     </section>
 
