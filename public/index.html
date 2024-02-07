@@ -24,7 +24,7 @@
   </head>
   <body>
     <nav
-      class="w-full top-0 left-0 right-0 p-4 fixed z-99"
+      class="w-full top-0 left-0 right-0 p-4 fixed z-50"
       x-data="{open: false}"
       id="nav"
     >
@@ -99,19 +99,26 @@
       </div>
     </section>
 
+    <section id="our-services">
+      <div class="container mx-auto min-h-min p-4 md:py-8">
+        <h1 class="font-bold text-xl md:text-3xl text-center">OUR SERVICES</h1>
+      </div>
+    </section>
+
     <section id="our-history">
       <div
-        class="container mx-auto min-h-screen flex justify-center items-center"
+        class="container mx-auto min-h-min py-4 md:py-8 flex justify-center items-center relative"
       >
-        <div class="grid grid-cols-12 px-4">
-          <div class="col-span-12">
-            <hr class="w-8 mb-3 bg-yellow-500 h-[3px] opacity-75" />
-            <h1 class="font-bold text-xl">OUR HISTORY</h1>
-            <p class="text-sm opacity-75 font-semibold mb-2 mt-4">
+        <div class="grid grid-cols-12 px-4 md:px-16">
+          <div class="col-span-12 md:col-span-6">
+            <h1 class="font-bold text-xl md:text-3xl">OUR HISTORY</h1>
+            <p
+              class="text-sm opacity-75 font-semibold mb-2 mt-4 md:text-base md:mt-8 md:mb-4"
+            >
               OUR CONSTRUCTION COMPANY HAS BEEN FOUNDED 10 YEARS AGO, AT THE
               VERY PEAK OF THE BUILDING FRENZY IN THE US...
             </p>
-            <p class="text-[12px] opacity-50 mb-4">
+            <p class="text-[12px] opacity-50 mb-4 md:text-sm">
               Since then we've build hundreds of commertial, government, and
               private buildings and facilities. It may not sound like a lot, but
               if you estimate the manpower, working hours, planing and
@@ -119,13 +126,15 @@
               project, then our productivity is immense!
             </p>
             <button
-              class="bg-yellow-500 text-white text-[12px] px-6 py-2 rounded-sm"
+              class="bg-yellow-500 text-white text-[12px] px-6 py-2 rounded-sm w-max md:absolute md:bottom-9"
             >
               READ MORE
             </button>
           </div>
-          <div class="col-span-12 mt-4">
-            <img src="./assets/img/worker.jpg" alt="" />
+          <div
+            class="col-span-12 md:col-span-6 mt-4 md:mt-0 justify-end md:flex"
+          >
+            <img src="./assets/img/worker.jpg" alt="" class="w-full md:w-3/4" />
           </div>
         </div>
       </div>
