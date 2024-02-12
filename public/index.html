@@ -64,7 +64,7 @@
           <li><a href="#home" @click="open = !open">HOME</a></li>
           <li><a href="#our-services" @click="open = !open">SERVICES</a></li>
           <li><a href="#our-history" @click="open = !open">ABOUT</a></li>
-          <li><a href="" @click="open = !open">PRODUCTS</a></li>
+          <li><a href="" @click="open = !open">BLOGS</a></li>
           <li><a href="" @click="open = !open">RECENT NEWS</a></li>
         </ul>
         <div class="hidden md:block">
@@ -72,7 +72,7 @@
             <li><a href="#home">HOME</a></li>
             <li><a href="#our-services">SERVICES</a></li>
             <li><a href="#our-history">ABOUT</a></li>
-            <li><a href="">PRODUCTS</a></li>
+            <li><a href="#blogs">BLOGS</a></li>
             <li><a href="">CONTACTS</a></li>
           </ul>
         </div>
@@ -100,7 +100,7 @@
     </section>
 
     <section id="our-services">
-      <div class="container mx-auto min-h-min p-4 md:py-8">
+      <div class="container mx-auto min-h-min px-4 pt-14 pb-4 md:pt-16">
         <h1 class="font-bold text-xl md:text-3xl text-center mb-4">
           OUR SERVICES
         </h1>
@@ -173,7 +173,7 @@
             <div
               class="w-12 md:w-20 aspect-square p-3 bg-yellow-500 rounded-full"
             >
-              <img src="./assets/img/icons/building-regular.svg" alt="" />
+              <img src="./assets/img/icons/building-columns-solid.svg" alt="" />
             </div>
             <div class="text-center md:text-left md:ml-4">
               <h1
@@ -234,7 +234,7 @@
 
     <section id="our-history" class="bg-slate-100">
       <div
-        class="container mx-auto min-h-min py-4 md:py-8 flex justify-center items-center relative"
+        class="container mx-auto min-h-min pb-4 pt-16 md:pb-8 md:pt-[4.5rem] flex justify-center items-center relative"
       >
         <div class="grid grid-cols-12 px-4 md:px-16">
           <div class="col-span-12 md:col-span-6">
@@ -262,6 +262,57 @@
             class="col-span-12 md:col-span-6 mt-4 md:mt-0 justify-end md:flex"
           >
             <img src="./assets/img/worker.jpg" alt="" class="w-full md:w-3/4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blogs">
+      <div class="container mx-auto px-4 py-8 md:px-16">
+        <h1 class="font-bold text-xl md:text-3xl text-center mb-4">
+          OUR BLOGS
+        </h1>
+        <div class="flex flex-col gap-4 md:flex-row">
+          <div class="w-full p-4 md:w-1/3 relative">
+            <a href="">
+              <img src="./assets/img/blog1.jpg" alt="" class="rounded-md" />
+              <h1 class="font-bold text-sm text-black my-4">
+                Building Materials And The Climate: Constructing A New Future
+              </h1>
+              <button
+                class="bg-yellow-500 text-white text-[12px] px-6 py-2 rounded-sm w-max absolute -bottom-4"
+              >
+                READ MORE
+              </button>
+            </a>
+          </div>
+          <div class="w-full p-4 md:w-1/3 relative">
+            <a href="">
+              <img src="./assets/img/blog2.jpg" alt="" class="rounded-md" />
+              <h1 class="font-bold text-sm text-black my-4">
+                Australian homes can be made climate-ready, reducing bills and
+                emissions - a new report shows how
+              </h1>
+              <button
+                class="bg-yellow-500 text-white text-[12px] px-6 py-2 rounded-sm w-max absolute -bottom-4"
+              >
+                READ MORE
+              </button>
+            </a>
+          </div>
+          <div class="w-full p-4 md:w-1/3 relative">
+            <a href="">
+              <img src="./assets/img/blog3.jpg" alt="" class="rounded-md" />
+              <h1 class="font-bold text-sm text-black my-4">
+                Asymmetrical bridges, timber towers and a repurposed gas
+                platform: awards hail 2023's best structures
+              </h1>
+              <button
+                class="bg-yellow-500 text-white text-[12px] px-6 py-2 rounded-sm w-max absolute -bottom-4"
+              >
+                READ MORE
+              </button>
+            </a>
           </div>
         </div>
       </div>
